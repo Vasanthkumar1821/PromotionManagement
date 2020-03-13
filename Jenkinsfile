@@ -37,7 +37,7 @@ pipeline {
 		dir("Promotion"){
                 bat 'mvn clean verify'
 			echo 'Jar File Created...'
-                    fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes:'target/Promotion.jar', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
+                    fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes:'target/Promotion-0.0.1-SNAPSHOT.jar', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
                 }
 
 }
