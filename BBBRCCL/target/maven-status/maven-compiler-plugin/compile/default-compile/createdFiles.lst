@@ -1,0 +1,5 @@
+com\PromotionManagement\PromotionManagementModel.class
+com\PromotionManagement\JDBCConnection\JDBCConnector.class
+com\Application\Application.class
+com\PromotionManagement\DAO\PromotionManagementDao.class
+com\Application\ApplicationController.class
