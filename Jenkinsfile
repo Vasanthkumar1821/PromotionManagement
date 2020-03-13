@@ -39,7 +39,6 @@ pipeline {
 			echo 'Jar File Created...'
                     fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes:'Promotion-0.0.1-SNAPSHOT.jar', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
                 }
-
 }
         }
 	}
