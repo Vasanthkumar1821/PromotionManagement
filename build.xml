@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="BBBRCCL" default="war">
+
+	
+
+	
+  
+  <target name="war">
+		<war destfile="sample.war" webxml="src/main/webapp/WEB-INF/web.xml">
+			<fileset dir="src/main/webapp" />
+		</war>
+	</target>
+
+</project>
