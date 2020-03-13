@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-               echo 'pulling my sample Xhtml project from github'
+               echo 'pulling BBBRCCL and Promotion from Git Hub'
                  checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'aec0f0bb-36a4-44bd-9bd4-21f118b01f2b', url: 'https://github.com/Vasanthkumar1821/promotionManagement.git']]])
                 echo 'Success...'
             }
@@ -18,6 +18,7 @@ pipeline {
         stage('Deploy') {
        tools {
                 jdk "ibmjdk"
+	       jdk "MavenHome"
             }
             steps {
            		bat 'java -version'
