@@ -26,8 +26,8 @@ pipeline {
 
         stage('Deploy') {
        tools {
-                jdk "ibmjdk",
-	       jdk "MavenHome"
+                jdk "ibmjdk"
+	       maven "MavenHome"
             }
             steps {
            	bat 'java -version'
