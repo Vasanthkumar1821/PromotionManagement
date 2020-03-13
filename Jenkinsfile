@@ -21,12 +21,17 @@ pipeline {
 	       jdk "MavenHome"
             }
             steps {
-           		bat 'java -version'
-                echo 'Running sample Ant...'
+           	bat 'java -version'
+                echo 'Running  Ant to create War...'
                 bat 'ant war' 
+		    fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'BBBRCCL.war', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
+		dir("PromotionEligibility"){
+                bat 'mvn clean verify'
+			echo 'Jar File Created...'
+                  //  fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes:'target/PromotionEligibility.war', targetLocation: 'C:/IBM/wlp/usr/servers/PromotionsServer/dropins')])
+                }
 
- 			fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'BBBRCCL.war', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
-            }
+}
         }
 	}
 }
