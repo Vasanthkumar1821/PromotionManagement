@@ -198,42 +198,42 @@
 	</section>
 	<!-- Section Right -->
 
-
-	<div ng-controller="viewController">
-		<h5>Promotions List</h5>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Id</th>
-					<th>Promotion Name</th>
-					<th>Promotion State</th>
-					<th>Promotion Valid From</th>
-					<th>Promotion Expires At</th>
-					<th>Discount Amount</th>
-					<th>Edit</th>
-					<th>Delete</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="promotion in promotions">
-					<td>{{$index + 1}}</td>
-					<td>{{promotion.promotionName}}</td>
-					<td>{{promotion.promotionState}}</td>
-					<td>{{promotion.promotionValidFrom}}</td>
-					<td>{{promotion.promotionExpiresAt}}</td>
-					<td>{{promotion.discountAmount}}</td>
-					<!-- 	<td><button class="btn btn-success"
+	<div style="margin-left: 50px; margin-right: 50px;">
+		<div ng-controller="viewController">
+			<h5>Promotions List</h5>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>S.No</th>
+						<th>Promotion Name</th>
+						<th>Promotion State</th>
+						<th>Promotion Valid From</th>
+						<th>Promotion Expires At</th>
+						<th>Discount Amount</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="promotion in promotions">
+						<td>{{$index + 1}}</td>
+						<td>{{promotion.promotionName}}</td>
+						<td>{{promotion.promotionState}}</td>
+						<td>{{promotion.promotionValidFrom}}</td>
+						<td>{{promotion.promotionExpiresAt}}</td>
+						<td>{{promotion.discountAmount}}</td>
+						<!-- 	<td><button class="btn btn-success"
 							ng-click="updatePromotion()">Edit</button></td> -->
-					<td><button type="button" class="btn btn-success"
-							ng-click="clickedPromotion(promotion)" data-toggle="modal"
-							data-target="#myModal">Edit</button></td>
-					<td><button class="btn btn-danger"
-							ng-click="deletePromotion(promotion.id)">Delete</button></td>
-				</tr>
+						<td><button type="button" class="btn btn-success"
+								ng-click="clickedPromotion(promotion)" data-toggle="modal"
+								data-target="#myModal">Edit</button></td>
+						<td><button class="btn btn-danger"
+								ng-click="deletePromotion(promotion.id)">Delete</button></td>
+					</tr>
 
-			</tbody>
-		</table>
-
+				</tbody>
+			</table>
+		</div>
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog">
@@ -258,7 +258,7 @@
 										<div class="form-group">
 											<label for="promotionName">Promotion Name</label> <input
 												type="text" class="form-control"
-												ng-model="selectpromotion.promotionName" value="{{}}"
+												ng-model="selectpromotion.promotionName"
 												placeholder="Enter Promotion name" required
 												pattern="[A-Za-z\s]{0,}">
 										</div>
@@ -327,8 +327,8 @@
 					<div class="col-xl-4 col-md-6 col-lg-4 ">
 						<div class="footer_widget">
 							<div class="footer_logo">
-								<a href="#"> <img src="img/AvpsLogo.png" height="70px"
-									width="110px" alt="">
+								<a href="#"> <!-- <img src="img/AvpsLogo.png" height="70px"
+									width="110px" alt=""> -->
 								</a>
 							</div>
 							<p>
