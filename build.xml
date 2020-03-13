@@ -7,8 +7,8 @@
 	
   
   <target name="war">
-		<war destfile="BBBRCCL.war" webxml="src/main/webapp/WEB-INF/web.xml">
-			<fileset dir="src/main/webapp" />
+		<war destfile="BBBRCCL.war" webxml="BBBRCCL\src\main\webapp\WEB-INF\web.xml">
+			<fileset dir="BBBRCCL\src\main\webapp" />
 		</war>
 	</target>
 
