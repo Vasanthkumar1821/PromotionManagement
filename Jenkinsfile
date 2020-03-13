@@ -25,7 +25,7 @@ pipeline {
                 echo 'Running  Ant to create War...'
                 bat 'ant war' 
 		    fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'BBBRCCL.war', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
-		dir("PromotionEligibility"){
+		dir("Promotion"){
                 bat 'mvn clean verify'
 			echo 'Jar File Created...'
                   //  fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes:'target/PromotionEligibility.war', targetLocation: 'C:/IBM/wlp/usr/servers/PromotionsServer/dropins')])
